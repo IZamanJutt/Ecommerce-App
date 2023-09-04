@@ -15,6 +15,8 @@ class AddToBasket extends StatelessWidget {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
+          width: AppLayout.getScreenWidth(),
+         // height: AppLayout.getScreenHeight(),
           alignment: Alignment.topLeft,
           color: Styles.bgColor,
           child: Column(
@@ -69,8 +71,7 @@ class AddToBasket extends StatelessWidget {
                   )
               ),
               Container(
-                //width: AppLayout.getWidth(400),
-                height: AppLayout.getHeight(148),
+                height: AppLayout.getHeight(167),
                 padding: EdgeInsets.all(AppLayout.getHeight(30)),
                 decoration: BoxDecoration(
                   border: Border.all(width: 1, color: Colors.grey),

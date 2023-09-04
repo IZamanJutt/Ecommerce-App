@@ -21,6 +21,8 @@ class OrderList extends StatelessWidget {
       builder: (BuildContext context, ScrollController scrollController, double bottomSheetOffset) {
         return SingleChildScrollView(
           child: Container(
+            width: AppLayout.getScreenWidth(),
+            height: AppLayout.getScreenHeight(),
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(24),

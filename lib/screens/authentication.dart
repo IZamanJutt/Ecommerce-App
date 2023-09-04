@@ -21,7 +21,7 @@ class Authentication extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: AppLayout.getWidth(2500),
+              width: AppLayout.getScreenWidth(),
               height: AppLayout.getHeight(469),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30)),

@@ -2,7 +2,6 @@ import 'package:ecommerce/utills/app_layout.dart';
 import 'package:ecommerce/utills/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
 import 'add_to_basket.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,8 +12,10 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          width: AppLayout.getScreenWidth(),
+         // height: AppLayout.getScreenHeight(),
           padding: EdgeInsets.only(left: AppLayout.getWidth(10), right: AppLayout.getWidth(20), top: AppLayout.getHeight(70)),
-          color: Styles.bgColor1,
+          //color: Styles.bgColor1,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -52,10 +53,10 @@ class HomeScreen extends StatelessWidget {
               ),
               Gap(AppLayout.getHeight(40)),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(10),
+                    padding: EdgeInsets.all(AppLayout.getHeight(7)),
                     width: AppLayout.getWidth(310),
                     height: AppLayout.getHeight(56),
                     decoration: BoxDecoration(
@@ -79,6 +80,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Gap(AppLayout.getHeight(40)),
                   const Image(image: AssetImage('assets/images/filter.png'))
                 ],
               ),
@@ -89,7 +91,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Gap(AppLayout.getHeight(20)),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     width: AppLayout.getWidth(152),
@@ -134,9 +136,10 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  Gap(AppLayout.getHeight(40)),
                   Container(
-                    width: 152,
-                    height: 190,
+                    width: AppLayout.getWidth(152),
+                    height: AppLayout.getHeight(190),
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -181,7 +184,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Gap(AppLayout.getHeight(20)),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     children: [
@@ -200,14 +203,17 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Gap(AppLayout.getWidth(45)),
                   Text(
                     'Popular',
                     style: Styles.textStyle.copyWith(color: const Color(0xFF938DB5)),
                   ),
+                  Gap(AppLayout.getWidth(45)),
                   Text(
                     'New combo',
                     style: Styles.textStyle.copyWith(color: const Color(0xFF938DB5)),
                   ),
+                  Gap(AppLayout.getWidth(45)),
                   Text(
                     'Top',
                     style: Styles.textStyle.copyWith(color: const Color(0xFF938DB5)),
@@ -218,7 +224,7 @@ class HomeScreen extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child:  Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
                       onTap: (){
@@ -327,7 +333,7 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: Container(
                         width: AppLayout.getWidth(140),
-                        height: AppLayout.getHeight(150),
+                        //height: AppLayout.getHeight(150),
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
@@ -375,7 +381,7 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }

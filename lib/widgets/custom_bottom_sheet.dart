@@ -1,4 +1,5 @@
 import 'package:ecommerce/screens/track_order.dart';
+import 'package:ecommerce/utills/app_layout.dart';
 import 'package:ecommerce/utills/app_styles.dart';
 import 'package:ecommerce/widgets/btn_widget.dart';
 import 'package:ecommerce/widgets/custom_text_field.dart';
@@ -31,7 +32,8 @@ class CustomBottomSheet extends StatelessWidget {
               ),
             ),
             Container(
-              height: 550,
+              height: AppLayout.getScreenHeight(),
+              width: AppLayout.getScreenWidth(),
               padding: const EdgeInsets.all(30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
